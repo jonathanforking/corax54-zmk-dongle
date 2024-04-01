@@ -1,0 +1,93 @@
+{
+  "id": "corax",
+  "name": "corax",
+  "keyboard_name": "Corax",
+  "url": "https://github.com/dnlbauer/corax-keyboard",
+  "maintainer": "",
+  "layouts": {
+    "LAYOUT": {
+      "layout": [
+        { "label":     "1", "row": 0, "col":  2, "r":  -5, "x":  1.82, "y": 1.06, "rx":  2.32, "ry": 1.56 },
+        { "label":     "2", "row": 0, "col":  3, "r":   0, "x":  3.02, "y": 0.32 },
+        { "label":     "3", "row": 0, "col":  4, "r":   0, "x":  3.99, "y":    0 },
+        { "label":     "4", "row": 0, "col":  5, "r":   0, "x":  4.96, "y": 0.32 },
+        { "label":     "5", "row": 0, "col":  6, "r":   0, "x":  5.94, "y": 0.46 },
+        { "label":     "6", "row": 0, "col": 10, "r":   0, "x": 10.21, "y": 0.46 },
+        { "label":     "7", "row": 0, "col": 11, "r":   0, "x": 11.19, "y": 0.32 },
+        { "label":     "8", "row": 0, "col": 12, "r":   0, "x": 12.16, "y":    0 },
+        { "label":     "9", "row": 0, "col": 13, "r":   0, "x": 13.13, "y": 0.32 },
+        { "label":     "0", "row": 0, "col": 14, "r":   5, "x": 14.33, "y": 1.06, "rx": 14.83, "ry": 1.56 },
+
+        { "label":   "TAB", "row": 1, "col":  1, "r":  -5, "x":  0.93, "y": 2.12, "rx":  1.43, "ry": 2.62 },
+        { "label":     "Q", "row": 1, "col":  2, "r":  -5, "x":   1.9, "y": 2.03, "rx":   2.4, "ry": 2.53 },
+        { "label":     "W", "row": 1, "col":  3, "r":   0, "x":  3.02, "y": 1.29 },
+        { "label":     "E", "row": 1, "col":  4, "r":   0, "x":  3.99, "y": 0.97 },
+        { "label":     "R", "row": 1, "col":  5, "r":   0, "x":  4.96, "y": 1.29 },
+        { "label":     "T", "row": 1, "col":  6, "r":   0, "x":  5.94, "y": 1.43 },
+        { "label":     "Y", "row": 1, "col": 10, "r":   0, "x": 10.21, "y": 1.43 },
+        { "label":     "U", "row": 1, "col": 11, "r":   0, "x": 11.19, "y": 1.29 },
+        { "label":     "I", "row": 1, "col": 12, "r":   0, "x": 12.16, "y": 0.97 },
+        { "label":     "O", "row": 1, "col": 13, "r":   0, "x": 13.13, "y": 1.29 },
+        { "label":     "P", "row": 1, "col": 14, "r":   5, "x": 14.25, "y": 2.03, "rx": 14.75, "ry": 2.53 },
+        { "label":  "BCSP", "row": 1, "col": 15, "r":   5, "x": 15.22, "y": 2.12, "rx": 15.72, "ry": 2.62 },
+
+        { "label":   "ESC", "row": 2, "col":  0, "r":  -5, "x":  0.04, "y": 3.18, "rx":  0.54, "ry": 3.68 },
+        { "label":     "`", "row": 2, "col":  1, "r":  -5, "x":  1.01, "y": 3.09, "rx":  1.51, "ry": 3.59 },
+        { "label":     "A", "row": 2, "col":  2, "r":  -5, "x":  1.98, "y":    3, "rx":  2.48, "ry":  3.5 },
+        { "label":     "S", "row": 2, "col":  3, "r":   0, "x":  3.02, "y": 2.26 },
+        { "label":     "D", "row": 2, "col":  4, "r":   0, "x":  3.99, "y": 1.94 },
+        { "label":     "F", "row": 2, "col":  5, "r":   0, "x":  4.96, "y": 2.26 },
+        { "label":     "G", "row": 2, "col":  6, "r":   0, "x":  5.94, "y": 2.41 },
+        { "label":     "H", "row": 2, "col": 10, "r":   0, "x": 10.21, "y": 2.41 },
+        { "label":     "J", "row": 2, "col": 11, "r":   0, "x": 11.19, "y": 2.26 },
+        { "label":     "K", "row": 2, "col": 12, "r":   0, "x": 12.16, "y": 1.94 },
+        { "label":     "L", "row": 2, "col": 13, "r":   0, "x": 13.13, "y": 2.26 },
+        { "label":     ";", "row": 2, "col": 14, "r":   5, "x": 14.17, "y":    3, "rx": 14.67, "ry":  3.5 },
+        { "label":     "'", "row": 2, "col": 15, "r":   5, "x": 15.14, "y": 3.09, "rx": 15.64, "ry": 3.59 },
+        { "label": "MAGIC", "row": 2, "col": 16, "r":   5, "x": 16.11, "y": 3.18, "rx": 16.61, "ry": 3.68 },
+
+        { "label":  "SHFT", "row": 3, "col":  1, "r":  -5, "x":  1.09, "y": 4.05, "rx":  1.59, "ry": 4.55 },
+        { "label":     "Z", "row": 3, "col":  2, "r":  -5, "x":  2.06, "y": 3.97, "rx":  2.56, "ry": 4.47 },
+        { "label":     "X", "row": 3, "col":  3, "r":   0, "x":  3.02, "y": 3.23 },
+        { "label":     "C", "row": 3, "col":  4, "r":   0, "x":  3.99, "y": 2.91 },
+        { "label":     "V", "row": 3, "col":  5, "r":   0, "x":  4.96, "y": 3.23 },
+        { "label":     "B", "row": 3, "col":  6, "r":   0, "x":  5.94, "y": 3.38 },
+        { "label":  "MUTE", "row": 3, "col":  7, "r":   0, "x":  6.94, "y": 3.38 },
+        { "label": "PAUSE", "row": 3, "col":  9, "r":   0, "x":  9.21, "y": 3.38 },
+        { "label":     "N", "row": 3, "col": 10, "r":   0, "x": 10.21, "y": 3.38 },
+        { "label":     "M", "row": 3, "col": 11, "r":   0, "x": 11.19, "y": 3.23 },
+        { "label":     ",", "row": 3, "col": 12, "r":   0, "x": 12.16, "y": 2.91 },
+        { "label":     ".", "row": 3, "col": 13, "r":   0, "x": 13.13, "y": 3.23 },
+        { "label":     "/", "row": 3, "col": 14, "r":   5, "x": 14.09, "y": 3.97, "rx": 14.59, "ry": 4.47 },
+        { "label":  "SHFT", "row": 3, "col": 15, "r":   5, "x": 15.06, "y": 4.05, "rx": 15.56, "ry": 4.55 },
+
+        { "label":   "GUI", "row": 4, "col":  4, "r":   0, "x":  3.99, "y": 3.89 },
+        { "label":   "ALT", "row": 4, "col":  5, "r":   0, "x":  4.96, "y": 4.21 },
+        { "label":   "MOD", "row": 4, "col":  6, "r":  15, "x":  6.04, "y": 4.46, "rx":  6.54, "ry": 4.96 },
+        { "label":   "SPC", "row": 4, "col":  7, "r":  30, "x":  7.08, "y": 4.83, "rx":  7.58, "ry": 5.58, "h": 1.5 },
+        { "label":   "RET", "row": 4, "col":  9, "r": -30, "x":  9.08, "y": 4.83, "rx":  9.58, "ry": 5.58, "h": 1.5 },
+        { "label":   "MOD", "row": 4, "col": 10, "r": -15, "x": 10.11, "y": 4.46, "rx": 10.61, "ry": 4.96 },
+        { "label":   "ALT", "row": 4, "col": 11, "r":   0, "x": 11.19, "y": 4.21 },
+        { "label":   "GUI", "row": 4, "col": 12, "r":   0, "x": 12.16, "y": 3.89 }
+      ]
+    }
+  },
+  "sensors": [
+    {
+      "ref": "encoder_left",
+      "name": "encoder_left",
+      "identifier": "encoder_left",
+      "compatible": "alps,ec11",
+      "label": "LEFT_ENCODER",
+      "enabled": false
+    },
+    {
+      "ref": "encoder_right",
+      "name": "encoder_right",
+      "identifier": "encoder_right",
+      "compatible": "alps,ec11",
+      "label": "RIGHT_ENCODER",
+      "enabled": false
+    }
+  ]
+}
