@@ -27,7 +27,8 @@
         ;
 };
 
-// NOTE: see corax.dtsi encoder definitions
 &right_encoder {
+    a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };

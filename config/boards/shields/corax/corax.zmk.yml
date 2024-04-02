@@ -3,7 +3,9 @@ id: corax
 name: Corax
 type: shield
 url: https://github.com/dnlbauer/corax-keyboard
-requires: [pro_micro]
+requires:
+  - pro_micro
+  - seeeduino_xiao_ble
 features:
   - keys
   - encoder
