@@ -24,7 +24,9 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
         compatible = "zmk,kscan-gpio-matrix";
     };
 
-    encoder_left: encoder_left {
+    // NOTE: originally was 'encoder_left' for both, changed for consistency with zmk docs (https://zmk.dev/docs/development/new-shield#encoders)
+    // will need to try what works
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -32,7 +34,8 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
         status = "disabled";
     };
 
-    encoder_right: encoder_right {
+    // NOTE: same as above
+    right_encoder: encoder_right {
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -42,7 +45,8 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_left &encoder_right>;
+        // NOTE: also changed here
+        sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <15>;
     };
 };
