@@ -26,6 +26,7 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
+        // steps = number of pulses in a complete rotation (hardware defined)
         steps = <30>;
         status = "disabled";
     };
@@ -39,6 +40,7 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
+        // how many keymap triggers there should be in a rotation (software defined)
         triggers-per-rotation = <15>;
     };
 };
