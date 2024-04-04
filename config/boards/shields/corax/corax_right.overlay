@@ -5,8 +5,6 @@
 };
 
 &kscan0 {
-    diode-direction = "col2row";
-
     // top to bottom
     row-gpios
         = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // COL 0 (NUM)

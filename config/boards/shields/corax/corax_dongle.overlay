@@ -1,30 +1,6 @@
 #include "corax.dtsi"
 
-&kscan0 {
-    diode-direction = "col2row";
-
-    // https://github.com/nrfconnect/sdk-zephyr/blob/272786b074227b4abcbe8f954d5bb8acf54f3dd3/boards/arm/seeeduino_xiao/seeed_xiao_connector.dtsi
-    
-    // I have no idea what I'm doing
-    // (Is this even needed for dongle?? There's no shield connected... try disabling pins once hardware is assembled and initial firmware works)
-    // https://docs.zephyrproject.org/3.5.0/hardware/peripherals/gpio.html
-    row-gpios
-        = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        ;
-
-    col-gpios
-        = <&xiao_d 3 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 4 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 2 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 0 GPIO_ACTIVE_HIGH>
-    ;
-};
+// No kscan config here, we're receiving our inputs from peripherals
 
 &xiao_spi { status = "disabled"; };
 &xiao_i2c { status = "disabled"; };
