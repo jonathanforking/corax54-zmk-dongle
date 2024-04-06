@@ -1,6 +1,8 @@
 #include "corax.dtsi"
 
 &kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+
     // top to bottom
     row-gpios
         = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // COL 0 (NUM)

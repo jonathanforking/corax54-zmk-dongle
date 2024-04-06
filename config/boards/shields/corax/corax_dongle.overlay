@@ -1,7 +1,17 @@
 #include "corax.dtsi"
 
-// No kscan config here, we're receiving our inputs from peripherals
+// Adapted from https://github.com/victorlucachi/zmk-config-dongle-corne
 
-&xiao_spi { status = "disabled"; };
-&xiao_i2c { status = "disabled"; };
-&xiao_serial { status = "disabled"; };
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
