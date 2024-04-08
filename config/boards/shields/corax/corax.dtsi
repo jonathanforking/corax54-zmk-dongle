@@ -20,9 +20,7 @@ RC(0,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) 
         >;
     };
 
-    kscan0: kscan {
-        diode-direction = "col2row";
-    };
+    kscan0: kscan { };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
