@@ -10,25 +10,24 @@
 
         colemak_dh {
             bindings = <
-                   &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                    &kp N6    &kp N7   &kp N8         &kp N9   &kp N0
-        &kp ESC    &kp Q   &kp W   &kp F     &kp P     &kp B                                     &kp J     &kp L    &kp U          &kp Y    &kp SEMI  &kp SQT
-&trans  &kp LSHFT  &kp A   &kp R   &kp S     &kp T     &kp G                                     &kp M     &kp N    &kp E          &kp I    &kp O     &kp EQUAL  &trans
-        &kp LCTRL  &kp Z   &kp X   &kp C     &kp D     &kp V      &kp C_MUTE    &kp C_AL_COFFEE  &kp K     &kp H    &kp COMMA      &kp DOT  &kp FSLH  &kp MINUS
-                                   &kp LGUI  &kp LALT  &lt PROG TAB  &kp SPACE     &kp ENTER        &kp BSPC  &kp DEL  &kp RIGHT_ALT
+                   &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                    &kp N6           &kp N7   &kp N8         &kp N9   &kp N0
+        &kp ESC    &kp Q   &kp W   &kp F     &kp P     &kp B                                     &kp J            &kp L    &kp U          &kp Y    &kp SEMI  &kp SQT
+&trans  &kp LSHFT  &kp A   &kp R   &kp S     &kp T     &kp G                                     &kp M            &kp N    &kp E          &kp I    &kp O     &kp EQUAL  &trans
+        &kp LCTRL  &kp Z   &kp X   &kp C     &kp D     &kp V      &kp C_MUTE    &kp C_AL_COFFEE  &kp K            &kp H    &kp COMMA      &kp DOT  &kp FSLH  &kp MINUS
+                                   &kp LGUI  &kp LALT  &lt 1 TAB  &kp SPACE     &kp ENTER        &lt 1 BACKSPACE  &kp DEL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
-        programming {
+        symbols {
             bindings = <
-                   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8            &kp F9             &kp F10
-        &kp GRAVE  &kp F11  &kp F12  &trans  &trans  &trans                    &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &kp BACKSLASH
-&trans  &kp CLCK   &trans   &trans   &trans  &trans  &trans                    &kp H   &kp J   &kp K             &kp L              &kp PG_UP  &kp HOME       &trans
-        &trans     &trans   &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans            &trans             &kp PG_DN  &kp END
-                                     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &trans  &trans           &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_EQUAL                       &kp AMPERSAND  &kp GRAVE             &kp TILDE              &kp BACKSLASH    &trans
+        &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                       &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH         &trans       &trans
+&trans  &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                        &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN      &kp PERCENT  &trans  &trans
+        &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &trans    &trans  &kp PIPE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &trans       &trans
+                                         &trans           &trans           &trans           &trans    &trans  &trans         &trans                &trans
             >;
         };
     };
 };
-
