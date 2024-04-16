@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define COLE 0
-#define PROG 1
+#define COL 0
+#define SYM 1
 
 / {
     keymap {
@@ -14,7 +14,7 @@
         &kp ESC    &kp Q   &kp W   &kp F     &kp P     &kp B                                     &kp J            &kp L    &kp U          &kp Y    &kp SEMI  &kp SQT
 &trans  &kp LSHFT  &kp A   &kp R   &kp S     &kp T     &kp G                                     &kp M            &kp N    &kp E          &kp I    &kp O     &kp EQUAL  &trans
         &kp LCTRL  &kp Z   &kp X   &kp C     &kp D     &kp V      &kp C_MUTE    &kp C_AL_COFFEE  &kp K            &kp H    &kp COMMA      &kp DOT  &kp FSLH  &kp MINUS
-                                   &kp LGUI  &kp LALT  &lt 1 TAB  &kp SPACE     &kp ENTER        &lt 1 BACKSPACE  &kp DEL  &kp RIGHT_ALT
+                                   &kp LGUI  &kp LALT  &lt SYM TAB  &kp SPACE     &kp ENTER        &lt SYM BACKSPACE  &kp DEL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
