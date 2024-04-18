@@ -10,11 +10,11 @@
 
         colemak_dh {
             bindings = <
-                   &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                    &kp N6           &kp N7   &kp N8         &kp N9   &kp N0
-        &kp ESC    &kp Q   &kp W   &kp F     &kp P     &kp B                                     &kp J            &kp L    &kp U          &kp Y    &kp SEMI  &kp SQT
-&trans  &kp LSHFT  &kp A   &kp R   &kp S     &kp T     &kp G                                     &kp M            &kp N    &kp E          &kp I    &kp O     &kp EQUAL  &trans
-        &kp LCTRL  &kp Z   &kp X   &kp C     &kp D     &kp V      &kp C_MUTE    &kp C_AL_COFFEE  &kp K            &kp H    &kp COMMA      &kp DOT  &kp FSLH  &kp MINUS
-                                   &kp LGUI  &kp LALT  &lt SYM TAB  &kp SPACE     &kp ENTER        &lt SYM BACKSPACE  &kp DEL  &kp RIGHT_ALT
+                    &kp N1          &kp N2      &kp N3     &kp N4         &kp N5                                         &kp N6         &kp N7                &kp N8                 &kp N9       &kp N0
+        &kp ESC     &kp Q           &kp W       &kp F      &kp P          &kp B                                          &kp J          &kp L                 &kp U                  &kp Y        &kp SEMI  &kp SQT
+&trans  &kp LSHFT   &kp A           &kp R       &kp S      &kp T          &kp G                                          &kp M          &kp N                 &kp E                  &kp I        &kp O     &lt PROG EQUAL  &trans
+        &kp LCTRL   &kp Z           &kp X       &kp C      &kp D          &kp V            &kp C_MUTE   &kp C_AL_COFFEE  &kp K          &kp H                 &kp COMMA              &kp DOT      &kp FSLH  &kp MINUS
+                                                &kp LGUI   &kp LALT       &kp TAB          &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp DEL               &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -22,11 +22,11 @@
 
         symbols {
             bindings = <
-                &trans  &trans           &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_EQUAL                       &kp AMPERSAND  &kp GRAVE             &kp TILDE              &kp BACKSLASH    &trans
-        &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                       &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH         &trans       &trans
-&trans  &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                        &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN      &kp PERCENT  &trans  &trans
-        &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &trans    &trans  &kp PIPE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &trans       &trans
-                                         &trans           &trans           &trans           &trans    &trans  &trans         &trans                &trans
+                    &trans          &trans      &trans     &trans         &trans                                         &trans         &trans                &trans                 &trans       &trans
+        &trans      &trans          &trans      &trans     &trans         &trans                                         &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &trans    &trans
+&trans  &trans      &kp BACKSLASH   &kp TILDE   &kp PIPE   &kp AMPERSAND  &kp EXCLAMATION                                &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH     &trans    &trans          &trans
+        &trans      &trans          &trans      &trans     &trans         &trans           &trans        &trans          &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &trans    &trans
+                                                &trans     &trans         &trans           &trans        &trans          &trans         &trans                &trans
             >;
         };
     };
