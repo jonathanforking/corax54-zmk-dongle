@@ -5,6 +5,18 @@
 #define SYM 1
 
 / {
+    behaviors {
+        ltp: layer_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <125>;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -12,7 +24,7 @@
             bindings = <
                     &kp N1          &kp N2      &kp N3     &kp N4         &kp N5                                         &kp N6         &kp N7                &kp N8                 &kp N9       &kp N0
         &kp ESC     &kp Q           &kp W       &kp F      &kp P          &kp B                                          &kp J          &kp L                 &kp U                  &kp Y        &kp SEMI  &kp SQT
-&trans  &kp LSHFT   &kp A           &kp R       &kp S      &kp T          &kp G                                          &kp M          &kp N                 &kp E                  &kp I        &kp O     &lt SYM EQUAL   &trans
+&trans  &kp LSHFT   &kp A           &kp R       &kp S      &kp T          &kp G                                          &kp M          &kp N                 &kp E                  &kp I        &kp O     &ltp SYM EQUAL  &trans
         &kp LCTRL   &kp Z           &kp X       &kp C      &kp D          &kp V            &kp C_MUTE   &kp C_AL_COFFEE  &kp K          &kp H                 &kp COMMA              &kp DOT      &kp FSLH  &kp MINUS
                                                 &kp LGUI   &kp LALT       &kp TAB          &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp DEL               &kp RIGHT_ALT
             >;
