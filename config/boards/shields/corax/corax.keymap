@@ -5,6 +5,7 @@
 #define SYM 1
 #define NAV 2
 #define LOL 3
+#define LCA 4
 
 / {
     behaviors {
@@ -65,11 +66,21 @@
 
         league {
             bindings = <
-                   &trans   &kp F1  &kp F2  &kp F3  &kp F4                       &trans  &trans  &trans  &trans  &trans
-        &kp ESC    &kp T    &kp N1  &kp N2  &kp N3  &kp N4                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp TAB  &kp Q   &kp W   &kp E   &kp R                        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LCTRL  &kp Z    &kp A   &kp S   &kp D   &kp F   &trans       &to COL &trans  &trans  &trans  &trans  &trans  &trans
-                                    &kp C   &kp B   &kp G   &kp SPACE    &trans  &trans  &trans  &trans
+                   &none    &kp N1  &kp N2      &kp N3     &kp N4                             &trans  &trans  &trans  &trans  &trans
+        &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &to COL &trans  &trans  &trans  &trans  &trans  &trans
+                                    &kp T       &kp LALT   &ltp LCA G  &kp SPACE      &trans  &trans  &trans  &trans
+            >;
+        };
+
+        league_camera {
+            bindings = <
+                &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans    &kp UP    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
