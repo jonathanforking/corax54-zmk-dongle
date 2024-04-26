@@ -2,28 +2,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define COL 0
-#define SYM 1
-#define NAV 2
-#define LOL 3
-#define LCA 4
+#define NAV 1
+#define SYM 2
+#define SWP 3
+#define LOL 4
+#define LCM 5
 
 / {
     behaviors {
-        ltp: layer_tap_preferred {
+        lp: layer_press {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
             require-prior-idle-ms = <125>;
-            retro-tap;
+            // retro-tap;
             bindings = <&mo>, <&kp>;
         };
 
-        mtp: mod_tap_preferred {
+        mp: mod_press {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
@@ -32,45 +33,57 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // TODO: find use for none keys in this layer
         colemak_dh {
             bindings = <
-                    &mtp F1 N1      &mtp F2 N2  &mtp F3 N3 &mtp F4 N4     &mtp F5 N5                                     &mtp F6 N6     &mtp F7 N7            &mtp F8 N8             &mtp F9 N9   &mtp F10 N0
-        &kp ESC     &kp Q           &kp W       &kp F      &kp P          &kp B                                          &kp J          &kp L                 &kp U                  &kp Y        &kp SEMI  &kp SQT
-&trans  &kp LSHFT   &kp A           &kp R       &kp S      &kp T          &kp G                                          &kp M          &kp N                 &kp E                  &kp I        &kp O     &ltp SYM EQUAL  &trans
-        &kp LCTRL   &kp Z           &kp X       &kp C      &kp D          &kp V            &kp C_MUTE   &to NAV          &kp K          &kp H                 &kp COMMA              &kp DOT      &kp FSLH  &kp MINUS
-                                                &kp LGUI   &kp LALT       &kp TAB          &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp DEL               &kp RIGHT_ALT
+                    &mp F1 N1   &mp F2 N2    &mp F3 N3    &mp F4 N4   &mp F5 N5                                      &mp F6 N6      &mp F7 N7    &mp F8 N8      &mp F9 N9     &mp F10 N0
+        &kp ESC     &kp Q       &kp W        &kp F        &kp P       &kp B                                          &kp J          &kp L        &kp U          &kp Y         &kp SEMI    &kp SQT
+&trans  &none       &mp LALT A  &mp LCTRL R  &mp LSHFT S  &lp SYM T   &kp G                                          &kp M          &lp NAV N    &mp RSHFT E    &mp RCTRL I   &mp LALT O  &kp EQUAL  &trans
+        &none       &kp Z       &kp X        &kp C        &kp D       &kp V            &kp C_MUTE   &to SWP          &kp K          &kp H        &kp COMMA      &kp DOT       &kp FSLH    &kp MINUS
+                                             &none        &kp LGUI    &kp TAB          &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp DEL      &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
-        symbols {
+        navigation {
             bindings = <
-                    &trans          &trans      &trans     &trans         &trans                                         &trans         &trans                &trans                 &trans       &trans
-        &trans      &trans          &trans      &kp UP     &trans         &trans                                         &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &trans    &trans
-&trans  &trans      &trans          &kp LEFT    &kp DOWN   &kp RIGHT      &trans                                         &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH     &trans    &trans          &trans
-        &trans      &kp BACKSLASH   &kp TILDE   &kp PIPE   &kp AMPERSAND  &kp EXCLAMATION  &trans        &trans          &kp GRAVE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &trans    &trans
-                                                &trans     &trans         &trans           &trans        &trans          &trans         &trans                &trans
+                &trans  &trans   &trans   &trans    &trans                    &trans  &trans   &trans  &trans  &trans
+        &trans  &trans  &trans   &kp UP   &trans    &kp HOME                  &trans  &trans   &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LEFT &kp DOWN &kp RIGHT &kp END                   &trans  &trans   &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans   &trans   &trans    &trans  &trans    &trans  &trans  &trans   &trans  &trans  &trans  &trans
+                                 &trans   &trans    &trans  &trans    &trans  &trans  &trans   &trans
             >;
         };
 
-        navigation {
+        symbols {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &to LOL  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &to COL &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &none   &none   &none   &none  &none                            &none        &none                 &none                  &none        &none
+        &none   &none   &none   &none   &none  &none                            &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp EXCLAMATION  &none
+&none   &none   &none   &none   &none   &none  &none                            &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH     &kp AMPERSAND    &kp PIPE   &none
+        &none   &none   &none   &none   &none  &none       &none    &none       &kp GRAVE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &kp BACKSLASH    &kp TILDE
+                                &none   &none  &none       &none    &none       &none        &none                 &none
+            >;
+        };
+
+
+        swap_layers {
+            bindings = <
+                &none  &none  &none   &none  &none                    &none  &none   &none  &none  &none
+        &none   &none  &none  &none   &none  &none                    &none  &to LOL &none  &none  &none  &none
+&none   &none   &none  &none  &none   &none  &none                    &none  &none   &none  &none  &none  &none  &none
+        &none   &none  &none  &none   &none  &none  &none    &to COL  &none  &none   &none  &none  &none  &none
+                              &none   &none  &none  &none    &none    &none  &none   &none
             >;
         };
 
         league {
             bindings = <
-                   &none    &kp N1  &kp N2      &kp N3     &kp N4                             &trans  &trans  &trans  &trans  &trans
-        &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &to COL &trans  &trans  &trans  &trans  &trans  &trans
-                                    &kp T       &kp LALT   &ltp LCA G  &kp SPACE      &trans  &trans  &trans  &trans
+                   &none    &kp N1  &kp N2      &kp N3     &kp N4                              &trans  &trans  &trans  &trans  &trans
+        &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &to COL  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &kp T       &kp LALT   &lp LCM G   &kp SPACE      &trans   &trans  &trans  &trans
             >;
         };
 
