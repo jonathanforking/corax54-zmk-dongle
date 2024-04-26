@@ -1,5 +1,5 @@
 # About
-This is my ZMK config for the [Corax54](https://github.com/dnlbauer/corax-keyboard/) keyboard. It employs a [Seeed XIAO BLE nRF5280](https://wiki.seeedstudio.com/XIAO_BLE/) as a central device/dongle, using the nice!nano boards in each keyboard half as peripherals.
+This is my ZMK config for the [Corax54](https://github.com/dnlbauer/corax-keyboard/) keyboard. It employs a [Seeed XIAO BLE nRF52840](https://wiki.seeedstudio.com/XIAO_BLE/) as a central device/dongle, using the nice!nano boards in each keyboard half as peripherals.
 
 # Usage
 Github actions are not supported, use `make all` to build UF2 files.
