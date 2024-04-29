@@ -36,11 +36,11 @@
         // TODO: find use for none keys in this layer
         colemak_dh {
             bindings = <
-                    &mp F1 N1   &mp F2 N2    &mp F3 N3    &mp F4 N4   &mp F5 N5                                      &mp F6 N6      &mp F7 N7    &mp F8 N8      &mp F9 N9     &mp F10 N0
-        &kp ESC     &kp Q       &kp W        &kp F        &kp P       &kp B                                          &kp J          &kp L        &kp U          &kp Y         &kp SEMI    &kp SQT
-&trans  &none       &mp LALT A  &mp LCTRL R  &mp LSHFT S  &lp SYM T   &kp G                                          &kp M          &lp NAV N    &mp RSHFT E    &mp RCTRL I   &mp LALT O  &kp EQUAL  &trans
-        &none       &kp Z       &kp X        &kp C        &kp D       &kp V            &kp C_MUTE   &to SWP          &kp K          &kp H        &kp COMMA      &kp DOT       &kp FSLH    &kp MINUS
-                                             &none        &kp LGUI    &kp TAB          &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp DEL      &kp RIGHT_ALT
+                    &mp F1 N1   &mp F2 N2    &mp F3 N3    &mp F4 N4   &mp F5 N5                                          &mp F6 N6      &mp F7 N7    &mp F8 N8      &mp F9 N9     &mp F10 N0
+        &kp ESC     &kp Q       &kp W        &kp F        &kp P       &kp B                                              &kp J          &kp L        &kp U          &kp Y         &kp SEMI    &kp SQT
+&trans  &kp LSHFT   &kp A       &kp R        &kp  S       &kp T       &kp G                                              &kp M          &kp N        &kp E          &kp I         &kp O       &kp RSHFT  &trans
+        &kp LCTRL   &kp Z       &kp X        &kp C        &kp D       &kp V            &kp C_MUTE     &to SWP            &kp K          &kp H        &kp COMMA      &kp DOT       &kp FSLH    &kp RCTRL
+                                             &kp LGUI     &kp LALT    &kp TAB          &lp SYM SPACE  &lp NAV ENTER      &kp BACKSPACE  &kp DEL      &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -58,11 +58,11 @@
 
         symbols {
             bindings = <
-                &none   &none   &none   &none  &none                            &none        &none                 &none                  &none        &none
-        &none   &none   &none   &none   &none  &none                            &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp EXCLAMATION  &none
-&none   &none   &none   &none   &none   &none  &none                            &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH     &kp AMPERSAND    &kp PIPE   &none
-        &none   &none   &none   &none   &none  &none       &none    &none       &kp GRAVE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &kp BACKSLASH    &kp TILDE
-                                &none   &none  &none       &none    &none       &none        &none                 &none
+                &none   &none   &none   &none  &none                            &none        &none                 &none                  &none            &none
+        &none   &none   &none   &none   &none  &none                            &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp TILDE      &kp GRAVE
+&none   &none   &none   &none   &none   &none  &none                            &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp PIPE       &kp HASH     &none
+        &none   &none   &none   &none   &none  &none       &none    &none       &kp EQUAL    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp BACKSLASH  &kp AT_SIGN
+                                &none   &none  &none       &none    &none       &kp PLUS     &kp MINUS             &kp STAR
             >;
         };
 
