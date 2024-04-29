@@ -83,7 +83,7 @@
         &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &to COL  &trans  &trans  &trans  &trans  &trans  &trans
-                                    &kp T       &kp LALT   &lp LCM G   &kp SPACE      &trans   &trans  &trans  &trans
+                                    &kp T       &lp LCM G  &kp LALT   &kp SPACE      &trans   &trans  &trans  &trans
             >;
         };
 
