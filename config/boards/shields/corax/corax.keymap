@@ -4,9 +4,10 @@
 #define COL 0
 #define NAV 1
 #define SYM 2
-#define SWP 3
-#define LOL 4
-#define LCM 5
+#define LOL 3
+#define LCM 4
+#define GAM 5
+#define SWP 6
 
 / {
     behaviors {
@@ -29,17 +30,26 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_swap {
+            bindings = <&sl SWP>;
+            // LCTRL+RCTRL
+            key-positions = <36 49>;
+        };
+    };
     
     keymap {
         compatible = "zmk,keymap";
 
-        // TODO: find use for none keys in this layer
         colemak_dh {
             bindings = <
                     &mp F1 N1   &mp F2 N2    &mp F3 N3    &mp F4 N4   &mp F5 N5                                          &mp F6 N6      &mp F7 N7    &mp F8 N8      &mp F9 N9     &mp F10 N0
         &kp ESC     &kp Q       &kp W        &kp F        &kp P       &kp B                                              &kp J          &kp L        &kp U          &kp Y         &kp SEMI    &kp SQT
 &trans  &kp LSHFT   &kp A       &kp R        &kp  S       &kp T       &kp G                                              &kp M          &kp N        &kp E          &kp I         &kp O       &kp RSHFT  &trans
-        &kp LCTRL   &kp Z       &kp X        &kp C        &kp D       &kp V            &kp C_MUTE     &to SWP            &kp K          &kp H        &kp COMMA      &kp DOT       &kp FSLH    &kp RCTRL
+        &kp LCTRL   &kp Z       &kp X        &kp C        &kp D       &kp V            &kp C_MUTE     &none              &kp K          &kp H        &kp COMMA      &kp DOT       &kp FSLH    &kp RCTRL
                                              &kp LGUI     &kp LALT    &kp TAB          &lp SYM SPACE  &lp NAV ENTER      &kp BACKSPACE  &kp DEL      &kp RIGHT_ALT
             >;
 
@@ -66,34 +76,43 @@
             >;
         };
 
-
-        swap_layers {
-            bindings = <
-                &none  &none  &none   &none  &none                    &none  &none   &none  &none  &none
-        &none   &none  &none  &none   &none  &none                    &none  &to LOL &none  &none  &none  &none
-&none   &none   &none  &none  &none   &none  &none                    &none  &none   &none  &none  &none  &none  &none
-        &none   &none  &none  &none   &none  &none  &none    &to COL  &none  &none   &none  &none  &none  &none
-                              &none   &none  &none  &none    &none    &none  &none   &none
-            >;
-        };
-
         league {
             bindings = <
-                   &none    &kp N1  &kp N2      &kp N3     &kp N4                              &trans  &trans  &trans  &trans  &trans
-        &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &to COL  &trans  &trans  &trans  &trans  &trans  &trans
-                                    &kp T       &lp LCM G  &kp LALT   &kp SPACE      &trans   &trans  &trans  &trans
+                   &none    &kp N1  &kp N2      &kp N3     &kp N4                              &none  &none   &none  &none  &none
+        &kp ESC    &kp TAB  &kp Q   &kp W       &kp E      &kp R                               &none  &none   &none  &none  &none  &none
+&trans  &kp LSHFT  &kp B    &kp A   &kp S       &kp D      &kp F                               &none  &none   &none  &none  &none  &none  &none
+        &kp LCTRL  &kp P    &kp Z   &kp X       &kp C      &kp V       &none          &none    &none  &none   &none  &none  &none  &none
+                                    &kp T       &lp LCM G  &kp LALT    &kp SPACE      &none    &none  &none   &none
             >;
         };
 
         league_camera {
             bindings = <
-                &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans    &kp UP    &trans     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans    &trans     &trans  &trans    &trans  &trans  &trans  &trans
+                &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                     &none  &none   &none  &none  &none
+        &trans  &trans  &trans    &kp UP    &trans     &trans                     &none  &none   &none  &none  &none  &none
+&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                     &none  &none   &none  &none  &none  &none  &none
+        &trans  &trans  &trans    &trans    &trans     &trans  &trans    &none    &none  &none   &none  &none  &none  &none
+                                  &trans    &trans     &trans  &trans    &none    &none  &none   &none
+            >;
+        };
+
+        gaming {
+            bindings = <
+                   &mp F1 N1 &mp F2 N2 &mp F3 N3   &mp F4 N4  &mp F5 N5                           &none  &none   &none  &none  &none
+        &kp ESC    &kp TAB   &kp Q     &kp W       &kp E      &kp R                               &none  &none   &none  &none  &none  &none
+&trans  &kp LSHFT  &kp B     &kp A     &kp S       &kp D      &kp F                               &none  &none   &none  &none  &none  &none  &none
+        &kp LCTRL  &kp G     &kp Z     &kp X       &kp C      &kp V       &none          &none    &none  &none   &none  &none  &none  &none
+                                       &kp P       &kp LALT   &kp LCTRL   &kp SPACE      &none    &none  &none   &none
+            >;
+        };
+        
+        swap_layers {
+            bindings = <
+                &none  &none  &none   &none  &none                      &none  &none   &none  &none  &none
+        &none   &none  &none  &none   &none  &none                      &none  &to LOL &none  &none  &none  &none
+&none   &none   &none  &none  &none   &none  &to GAM                    &none  &none   &none  &none  &none  &none  &none
+        &none   &none  &none  &to COL &none  &none    &none    &none    &none  &none   &none  &none  &none  &none
+                              &none   &none  &none    &none    &none    &none  &none   &none
             >;
         };
     };
