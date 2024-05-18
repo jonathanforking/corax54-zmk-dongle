@@ -58,19 +58,19 @@
 
         navigation {
             bindings = <
-                &trans  &trans   &trans   &trans    &trans                    &trans  &trans   &trans  &trans  &trans
-        &trans  &trans  &trans   &kp UP   &trans    &kp HOME                  &trans  &trans   &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT &kp DOWN &kp RIGHT &kp END                   &trans  &trans   &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans   &trans   &trans    &trans  &trans    &trans  &trans  &trans   &trans  &trans  &trans  &trans
-                                 &trans   &trans    &trans  &trans    &trans  &trans  &trans   &trans
+                &none  &none    &none    &none     &none                     &none  &none   &none  &none  &none
+        &none   &none  &none    &kp UP   &none     &kp HOME                  &none  &none   &none  &none  &none  &none
+&none   &none   &none  &kp LEFT &kp DOWN &kp RIGHT &kp END                   &none  &none   &none  &none  &none  &none  &none
+        &none   &none  &none    &none    &none     &none     &none    &none  &none  &none   &none  &none  &none  &none
+                                &none    &none     &none     &none    &none  &none  &none   &none
             >;
         };
 
         symbols {
             bindings = <
                    &none   &none   &none   &none  &none                            &none        &none                 &none                  &none            &none
-        &none      &none   &none   &none   &none  &none                            &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp TILDE      &kp GRAVE
-&none   &kp LSHFT  &none   &none   &none   &none  &none                            &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp PIPE       &kp HASH     &none
+        &none      &none   &none   &none   &none  &none                            &kp CARET    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp TILDE      &kp GRAVE
+&none   &kp LSHFT  &none   &none   &none   &none  &none                            &kp DOLLAR   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp PIPE       &kp HASH     &none
         &none      &none   &none   &none   &none  &none       &none    &none       &kp EQUAL    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT      &kp BACKSLASH  &kp AT_SIGN
                                    &none   &none  &none       &none    &kp MINUS   &kp PLUS     &kp STAR              &kp FSLH
             >;
@@ -99,8 +99,8 @@
         gaming {
             bindings = <
                    &mp F1 N1 &mp F2 N2 &mp F3 N3   &mp F4 N4  &mp F5 N5                           &none  &none   &none  &none  &none
-        &kp ESC    &kp TAB   &kp Q     &kp W       &kp E      &kp R                               &none  &none   &none  &none  &none  &none
-&trans  &kp LSHFT  &kp B     &kp A     &kp S       &kp D      &kp F                               &none  &none   &none  &none  &none  &none  &none
+        &kp ESC    &kp B     &kp Q     &kp W       &kp E      &kp R                               &none  &none   &none  &none  &none  &none
+&trans  &kp LSHFT  &kp TAB   &kp A     &kp S       &kp D      &kp F                               &none  &none   &none  &none  &none  &none  &none
         &kp LCTRL  &kp G     &kp Z     &kp X       &kp C      &kp V       &none          &none    &none  &none   &none  &none  &none  &none
                                        &kp P       &kp LALT   &kp LCTRL   &kp SPACE      &none    &none  &none   &none
             >;
